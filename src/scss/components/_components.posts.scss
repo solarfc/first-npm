@@ -1,0 +1,161 @@
+.posts {
+    margin-top: 3rem;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .recent {
+        width: 67%;
+
+        @include mq(md) {
+            width: 100%;
+        }
+    }
+
+    .sidebar {
+        width: 30%;
+
+        &-block { //Конкатинация в итоге .slidebar-block
+            padding: 1.5rem 1rem;
+            background: $white;
+            margin-bottom: 1rem;
+        }
+
+        @include mq(md) {
+            display: none;
+        }
+    }
+
+}
+
+.popular-post {
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: .6rem;
+
+    img {
+        display: block;
+        width: 3.5rem;
+    }
+
+    p {
+        margin: 0;
+        font-family: $ms;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        margin-left: 1rem;
+    }
+
+    &__title {
+        font-size: .7rem;
+        font-weight: bold;
+    }
+
+    &__data {
+        font-size: .6rem;
+        font-weight: lighter;
+    }
+}
+
+.post-category {
+
+    &__link {
+        font-size: .9rem;
+        text-decoration: none;
+        color: $text;
+        display: block;
+        margin-bottom: .6rem;
+        border-bottom: 1px solid red;
+
+        &:hover {
+            border-bottom: 1px solid green;
+        }
+
+        span {
+            font-size: .8rem;
+            padding-left: .2rem;
+        }
+    }
+}
+
+.main-post {
+
+    &__img {
+        img{
+            @include mq(md) {
+                display: block;
+                margin: 0 auto;
+                max-width: 100%;
+            }
+        }
+
+
+    }
+}
+
+.post {
+    display: flex;
+    background: $white;
+    margin-top: 2rem;
+    padding: 1rem;
+
+    @include mq(s) {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding-bottom: 1rem;
+    }
+
+    &__img {
+        display: block;
+        padding-right: 1rem;
+        width: 12rem;
+        height: 12rem;
+
+        @include mq(s) {
+            width: 50%;
+            height: auto;
+        }
+
+        @include mq(xs) {
+            width: 100%;
+        }
+
+
+    }
+
+    &__desc-block {
+
+    }
+
+    &__title {
+        text-transform: uppercase;
+
+    }
+
+    &__author {
+        text-transform: uppercase;
+
+    }
+
+    &__date {
+        text-transform: uppercase;
+
+    }
+
+    &__text {
+
+    }
+
+    &__link {
+        text-transform: uppercase;
+        text-decoration: none;
+
+    }
+}

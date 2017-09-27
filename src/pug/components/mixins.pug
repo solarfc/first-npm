@@ -1,0 +1,28 @@
+mixin button(link,texts)
+    a.button(href=link)=texts
+
+mixin popular(image,title,data)
+    .popular-post
+        //image или src
+        img(src=image)
+        .popular-post__text
+            p.popular-post__title=title
+            p.popular-post__data=data
+
+mixin category_one(href,name,value)
+    a.post-category__link(href=href)=name
+        span=value
+
+mixin post_one(src, title, author, date, text, href)
+    .post
+        img.post__img(src=src)
+        .post__desc-block
+            .post__title=title
+            span.post__author=author
+            span.post__date=date
+            p.post__text=text
+            +button(href,"Continue reading")
+
+
+
+

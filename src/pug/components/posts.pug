@@ -1,0 +1,67 @@
+.posts
+    .container
+        .recent
+            .post-title
+                p recent posts
+            .main-post
+            .main-post__img
+                img(src="http://www.zoopicture.ru/assets/2011/08/2465140688_19e90f9971.jpg")
+            .main-post__text
+                p Title
+                p This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel
+                    |velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
+                    |auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                    |Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+                    |Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor
+                    |a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                    |Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+                .main-post__links
+                    +button('http://football.ua/','Continue reading')
+            +post_one(
+                'https://pbs.twimg.com/profile_images/3344565008/0fd6db1ec05dd9427c1f3aa24cfb3e8d_400x400.jpeg',
+                'Title',
+                'Jinny',
+                'September 02,2017',
+                'This is Photoshops version  of Lorem Ipsum. Proin gravida' +
+                ' Nam nec tellus a odio tincidunt',
+                '#'
+            )
+
+        .sidebar
+            .post-title
+                p sidebar
+            .sidebar-block
+                .post-title.post-title--small
+                    p popular posts
+                +popular(
+                'http://www.zoopicture.ru/assets/2011/08/2465140688_19e90f9971.jpg',
+                'Title',
+                'September 10, 2017'
+                )
+                +popular(
+                'http://www.zoopicture.ru/assets/2011/08/2465140688_19e90f9971.jpg',
+                'Title2',
+                'September 11, 2017'
+                )
+                +popular(
+                'http://www.zoopicture.ru/assets/2011/08/2465140688_19e90f9971.jpg',
+                'Title big',
+                'September 110, 2017'
+                )
+                +popular(
+                'http://www.zoopicture.ru/assets/2011/08/2465140688_19e90f9971.jpg',
+                'Wow',
+                'September 17, 2017'
+                )
+
+
+
+
+            .sidebar-block
+                .post-title.post-title--small
+                    p categories
+                +category_one('#','Image','(62)')
+                +category_one('#','Image','(17)')
+                +category_one('#','Image','(2)')
+                +category_one('#','Image','(37)')
+
